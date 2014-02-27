@@ -1,0 +1,23 @@
+{
+  "name": "cirru-json",
+  "version": "0.0.1",
+  "description": "Convert between Cirru and JSON",
+  "main": "src/json.js",
+  "scripts": {
+    "test": "node-dev test.coffee"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@gitcafe.com:Cirru/cirru-json.git"
+  },
+  "keywords": [
+    "cirru",
+    "json"
+  ],
+  "author": "jiyinyiyong",
+  "license": "ISC",
+  "dependencies": {
+    "cirru-writer": "0.0.4",
+    "cirru-parser": "~0.7.1"
+  }
+}
