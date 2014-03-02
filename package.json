@@ -1,8 +1,8 @@
 {
   "name": "cirru-json",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Convert between Cirru and JSON",
-  "main": "src/json.js",
+  "main": "src/index.js",
   "scripts": {
     "test": "node-dev test.coffee"
   },

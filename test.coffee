@@ -1,7 +1,6 @@
 
 require 'shelljs/global'
-{parse} = require './coffee/parser'
-{generate} = require './coffee/generator'
+{parse, generate} = require './coffee/index'
 
 stringify = (x) ->
   JSON.stringify x, null, 2
