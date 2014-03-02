@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git@gitcafe.com:Cirru/cirru-json.git"
+    "url": "git@github.com:Cirru/cirru-json.git"
   },
   "keywords": [
     "cirru",
@@ -17,7 +17,7 @@
   "author": "jiyinyiyong",
   "license": "ISC",
   "dependencies": {
-    "cirru-writer": "0.0.4",
-    "cirru-parser": "~0.7.1"
+    "cirru-writer": "*",
+    "cirru-parser": "*"
   }
 }
