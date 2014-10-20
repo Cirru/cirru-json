@@ -1,6 +1,6 @@
 {
   "name": "cirru-json",
-  "version": "0.0.4",
+  "version": "0.0.4-2",
   "description": "Convert between Cirru and JSON",
   "main": "src/index.js",
   "scripts": {
