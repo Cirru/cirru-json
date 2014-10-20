@@ -1,3 +1,4 @@
+#!/usr/bin/env coffee
 
 require 'shelljs/make'
 
