@@ -2,6 +2,7 @@
 map (:a 1)
   :b ":number 2"
   :c :2
+  :x #null
   :d $ array 1 2 3
   :d2 $ array 1 :2 3
   :e $ map

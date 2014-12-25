@@ -8,9 +8,11 @@ astRead = (source) ->
 read = (tree) ->
   if typeof tree is 'string'
     code = tree
+    if code is '#null'
+      return null
     if code.match /^-?\d+(\.\d+)?$/
       return Number code
-    else if code[0] is ':'
+    if code[0] is ':'
       return code[1..]
 
   func = tree[0]

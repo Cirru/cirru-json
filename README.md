@@ -18,6 +18,7 @@ Grammar of config files:
 * Strings: `:str` or `":string with spaces"`
 * Arrays: `(array 1 (string 1))`, `([] 1 2)`
 * Maps: `(map (:a 1))`
+* Null: `#null`
 
 Read about Cirru interpreter for more:
 https://github.com/Cirru/interpreter#compact-literal-syntax
@@ -30,6 +31,7 @@ map
   :b ":number 2"
 
   :c :2
+  :x #null
 
   :d $ array 1 2 3
   :d2 $ array 1 :2 3

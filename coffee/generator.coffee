@@ -13,6 +13,8 @@ isMap = (x) ->
 gen = (data) ->
   type = Object.prototype.toString.call data
   switch type
+    when '[object Null]'
+      '#null'
     when '[object String]'
       ":#{data}"
     when '[object Array]'
