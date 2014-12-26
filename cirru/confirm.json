@@ -1,26 +1,26 @@
 {
-  "a": 1,
-  "b": "number 2",
-  "c": "2",
-  "x": null,
-  "d": [
+  "number": 1,
+  "string": "2",
+  "null": null,
+  "lambda": null,
+  "array": [
     1,
     2,
     3
   ],
-  "d2": [
+  "mixed-arrat": [
     1,
     "2",
     3
   ],
-  "e": {},
-  "e2": {
+  "empty-map": {},
+  "map": {
     "a": 1
   },
-  "e3": {
+  "map2": {
     "a": 2
   },
-  "e4": {
+  "nested-map": {
     "a": [
       1,
       2,

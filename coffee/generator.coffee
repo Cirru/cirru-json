@@ -1,40 +1,25 @@
 
 {pretty} = require 'cirru-writer'
 
-isArray = (x) -> Array.isArray x
-isString = (x) -> typeof x is 'string'
-isNumber = (x) -> typeof x is 'number'
-isMap = (x) ->
-  if isArray x
-    no
-  else
-    typeof x is 'object'
+type = (data) ->
+  Object.prototype.toString.call(data)[8...-1]
+
+makePairs = (data) ->
+  [":#{key}", (gen value)] for key, value of data
 
 gen = (data) ->
-  type = Object.prototype.toString.call data
-  switch type
-    when '[object Null]'
-      '#null'
-    when '[object String]'
-      ":#{data}"
-    when '[object Array]'
-      ['array'].concat data.map(gen)
-    when '[object Number]'
-      data.toString()
-    when '[object Object]'
-      ret = ['map']
-      for key, value of data
-        pair = []
-        pair.push ":#{key}"
-        pair.push (gen value)
-        ret.push pair
-      ret
-    else throw new Error "(#{JSON.stringify data}) is invalid"
+  switch (type data)
+    when 'Null'     then '#null'
+    when 'Function' then '#lambda' # special case
+    when 'String'   then ":#{data}"
+    when 'Number'   then data.toString()
+    when 'Array'    then ['array'].concat data.map(gen)
+    when 'Object'   then ['map'].concat makePairs(data)
+    else throw new Error "(#{data}) is invalid"
 
 exports.generate = (json) ->
   # console.log 'json:', JSON.stringify((gen json), null, 2)
   result = gen json
-  if isString result
-    result
-  else
-    pretty [result]
+  if (type result) is 'String'
+  then result
+  else pretty [result]
