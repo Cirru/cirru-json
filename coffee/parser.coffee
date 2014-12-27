@@ -7,6 +7,8 @@ astRead = (source) ->
 
 read = (tree) ->
   if typeof tree is 'string'
+    return true if tree is '#true'
+    return false if tree is '#false'
     return null if tree is '#null'
     return null if tree is '#lambda' # dont throw errors
     return Number tree if tree.match /^-?\d+(\.\d+)?$/

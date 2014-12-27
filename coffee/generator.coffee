@@ -10,6 +10,7 @@ makePairs = (data) ->
 gen = (data) ->
   switch (type data)
     when 'Null'     then '#null'
+    when 'Boolean'  then (if data then '#true' else '#false')
     when 'Function' then '#lambda' # special case
     when 'String'   then ":#{data}"
     when 'Number'   then data.toString()

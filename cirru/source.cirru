@@ -3,6 +3,7 @@ map
   :number 1
   :string :2
   :null #null
+  :bool #false
   :lambda #lambda
 
   :array $ array 1 2 3

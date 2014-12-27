@@ -20,6 +20,7 @@ Grammar of config files:
 * Maps: `(map (:a 1))`
 * Null: `#null`
 * Function: `#lambda`
+* Boolean: `#true`, `#false`
 
 Read about Cirru interpreter for more:
 https://github.com/Cirru/interpreter#compact-literal-syntax
@@ -31,6 +32,7 @@ map
   :number 1
   :string :2
   :null #null
+  :bool #false
   :lambda #lambda
 
   :array $ array 1 2 3

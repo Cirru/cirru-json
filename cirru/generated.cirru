@@ -2,6 +2,7 @@
 map (:number 1)
   :string :2
   :null #null
+  :bool #false
   :lambda #null
   :array $ array 1 2 3
   :mixed-arrat $ array 1 :2 3
