@@ -21,6 +21,7 @@ Grammar of config files:
 * Null: `#null`
 * Function: `#lambda`
 * Boolean: `#true`, `#false`
+* Undefined: `#undefined`
 
 Read about Cirru interpreter for more:
 https://github.com/Cirru/interpreter#compact-literal-syntax

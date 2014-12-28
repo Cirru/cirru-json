@@ -7,12 +7,13 @@ astRead = (source) ->
 
 read = (tree) ->
   if typeof tree is 'string'
-    return true if tree is '#true'
-    return false if tree is '#false'
-    return null if tree is '#null'
-    return null if tree is '#lambda' # dont throw errors
-    return Number tree if tree.match /^-?\d+(\.\d+)?$/
-    return tree[1..] if tree[0] is ':'
+    return true         if tree is '#true'
+    return undefined    if tree is '#undefined'
+    return false        if tree is '#false'
+    return null         if tree is '#null'
+    return null         if tree is '#lambda' # dont throw errors
+    return Number tree  if tree.match /^-?\d+(\.\d+)?$/
+    return tree[1..]    if tree[0] is ':'
 
   func = tree[0]
   args = tree[1..]
