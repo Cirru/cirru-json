@@ -1,6 +1,6 @@
 {
   "name": "cirru-json",
-  "version": "0.0.9",
+  "version": "0.0.10",
   "description": "Convert between Cirru and JSON",
   "main": "src/index.js",
   "scripts": {
@@ -17,7 +17,7 @@
   "author": "jiyinyiyong",
   "license": "ISC",
   "dependencies": {
-    "cirru-writer": "*",
-    "cirru-parser": "*"
+    "cirru-parser": "0.10.x",
+    "cirru-writer": "0.1.0-1"
   }
 }

@@ -1,8 +1,8 @@
 
-{parseShort} = require 'cirru-parser'
+{pare} = require 'cirru-parser'
 
 astRead = (source) ->
-  ast = parseShort source
+  ast = pare source
   read ast[0]
 
 read = (tree) ->
